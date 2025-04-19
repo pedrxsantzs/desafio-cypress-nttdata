@@ -1,26 +1,28 @@
+import { CadastroPageSelectors } from '../selectors/CadastroPageSelectors';
+
 export class CadastroPage {
     // Acessa a página de cadastro
     acessarPagina() {
-        cy.visit('/cadastrarusuarios')
-        cy.url().should('include', '/cadastrarusuarios')
+        cy.visit('/cadastrarusuarios');
+        cy.url().should('include', '/cadastrarusuarios');
     }
 
     // Preenche o formulário de cadastro
     preencherFormulario(usuario) {
-        cy.get('[data-testid="nome"]').type(usuario.nome)
-        cy.get('[data-testid="email"]').type(usuario.email)
-        cy.get('[data-testid="password"]').type(usuario.senha)
-        cy.get('[data-testid="checkbox"]').click()
+        cy.get(CadastroPageSelectors.nomeInput).type(usuario.nome);
+        cy.get(CadastroPageSelectors.emailInput).type(usuario.email);
+        cy.get(CadastroPageSelectors.passwordInput).type(usuario.senha);
+        cy.get(CadastroPageSelectors.checkboxInput).click();
     }
 
-    // Clica no botão de cadastrar
+    // Clica no botão de cadastro
     clicarCadastrar() {
-        cy.get('[data-testid="cadastrar"]').click()
+        cy.get(CadastroPageSelectors.cadastrarButton).click();
     }
 
     // Valida se o cadastro foi bem-sucedido
     validarCadastro() {
-        cy.contains('Cadastro realizado com sucesso').should('be.visible')
-        cy.url().should('include', '/admin/home')
+        cy.contains(CadastroPageSelectors.sucessoMensagem).should('be.visible');
+        cy.url().should('include', CadastroPageSelectors.urlHome);
     }
 }
