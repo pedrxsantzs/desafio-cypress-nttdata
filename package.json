@@ -1,0 +1,18 @@
+{
+  "name": "desafiotech-nttdata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.3.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.7.0"
+  }
+}
