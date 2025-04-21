@@ -19,18 +19,13 @@ Automatizar:
 
 ## 📁 Estrutura do Projeto
 
-desafio-cypress-nttdata/
-├── cypress/
-│   ├── e2e/
-│   │   ├── api/               # Testes de API (cadastro, login, produtos)
-│   │   └── frontend/          # Testes E2E da interface web
-│   ├── pages/                 # Page Objects para abstrair interações com a interface
-│   ├── support/               # Helpers e comandos customizados para testes
-│   └── utils/                 # Geração de dados dinâmicos com Faker
-├── cypress.config.js          # Configuração principal do Cypress
-├── package.json               # Dependências e scripts do projeto
-├── README.md                  # Documentação do projeto
-└── .gitignore                 # Arquivos e pastas ignorados pelo Git
+📁 cypress/
+├── 🧪 e2e/
+│   ├── 📡 api/               # Testes de API (cadastro, login, produtos)
+│   └── 💻 frontend/          # Testes E2E da interface web
+├── 📄 pages/                 # Page Objects para abstrair interações com a interface
+├── 🛠️ support/               # Helpers e comandos customizados para testes
+├── 🧰 utils/                 # Geração de dados dinâmicos com Faker
 
 ---
 
@@ -117,5 +112,5 @@ Pedro Augusto dos Santos Batista
 ## 📬 Contato
 
 Fique à vontade para entrar em contato por email ou LinkedIn!
--- profisional.pedroa@gmail.com
+-- profissional.pedroa@gmail.com
 -- https://www.linkedin.com/in/pedro-augustodsb17/
