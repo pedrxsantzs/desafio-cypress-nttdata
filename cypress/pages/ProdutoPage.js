@@ -34,4 +34,10 @@ export class ProdutoPage {
   validarCadastro() {
     cy.url().should("include", "/admin/listarprodutos");
   }
+
+  validarMensagemDeErro(mensagemEsperada) {
+    cy.get(ProdutoPageSelectors.alertaMensagem)
+      .should("be.visible")
+      .and("contain", mensagemEsperada);
+  }
 }

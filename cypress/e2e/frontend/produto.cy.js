@@ -32,3 +32,37 @@ describe("Cadastro de produto com sucesso", () => {
     produtoPage.validarCadastro();
   });
 });
+
+describe("Cadastro de produto com erro", () => {
+  const loginPage = new LoginPage();
+  const produtoPage = new ProdutoPage();
+
+  beforeEach(() => {
+    cy.fixture("usuarioLogin").then((usuario) => {
+      loginPage.acessarPagina();
+      loginPage.preencherFormulario(usuario);
+      loginPage.clicarEntrar();
+      cy.url().should("include", "/admin/home");
+      produtoPage.navegarParaCadastro();
+    });
+  });
+
+  it("deve exibir erro ao cadastrar um novo produto sem preencher campos obrigatórios", () => {
+    const produto = {
+      nome: "",
+      preco: "",
+      descricao: "",
+      quantidade: "",
+      imagem: "",
+    };
+
+    produtoPage.preencherFormulario(produto);
+
+    produtoPage.clicarCadastrar();
+
+    produtoPage.validarMensagemDeErro("Nome é obrigatório");
+    produtoPage.validarMensagemDeErro("Preco é obrigatório");
+    produtoPage.validarMensagemDeErro("Descricao é obrigatório");
+    produtoPage.validarMensagemDeErro("Quantidade é obrigatório");
+  });
+});

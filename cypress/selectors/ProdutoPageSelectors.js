@@ -6,5 +6,6 @@ export const ProdutoPageSelectors = {
     quantidadeInput: '[data-testid="quantity"]',
     imagemInput: '[data-testid="imagem"]',
     cadastrarButton: '[data-testid="cadastarProdutos"]',
+    alertaMensagem: ".alert",
   };
   
