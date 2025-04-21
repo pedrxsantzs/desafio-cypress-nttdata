@@ -1,3 +1,5 @@
+// -- Seletores/elementos utilizados da tela de cadastro usuários
+
 export const CadastroPageSelectors = {
   nomeInput: '[data-testid="nome"]',
   emailInput: '[data-testid="email"]',

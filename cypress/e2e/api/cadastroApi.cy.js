@@ -1,9 +1,9 @@
 import { cadastrarUsuario } from "../../support/api/cadastroHelper";
 import { faker } from "@faker-js/faker";
 
+// --- Cenario de testes positivos
 describe("API - Cadastro de Usuário com sucesso", () => {
   it("deve cadastrar um novo usuário com sucesso", () => {
-    // Gera dados dinâmicos para o novo usuário com faker
     const novoUsuario = {
         nome: faker.name.fullName(),
         email: faker.internet.email(),

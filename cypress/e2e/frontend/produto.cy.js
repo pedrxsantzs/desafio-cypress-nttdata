@@ -2,6 +2,7 @@ import { LoginPage } from "../../pages/LoginPage";
 import { ProdutoPage } from "../../pages/ProdutoPage";
 import { faker } from "@faker-js/faker";
 
+// --- Cenario de testes positivos
 describe("Cadastro de produto com sucesso", () => {
   const loginPage = new LoginPage();
   const produtoPage = new ProdutoPage();
@@ -33,6 +34,7 @@ describe("Cadastro de produto com sucesso", () => {
   });
 });
 
+// --- Cenario de testes negativos
 describe("Cadastro de produto com erro", () => {
   const loginPage = new LoginPage();
   const produtoPage = new ProdutoPage();

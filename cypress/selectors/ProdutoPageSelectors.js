@@ -1,3 +1,5 @@
+// -- Seletores/elementos utilizados da tela de cadastro produtos
+
 export const ProdutoPageSelectors = {
     acessarCadastroProdutoBtn: '[data-testid="cadastrarProdutos"]',
     nomeInput: '[data-testid="nome"]',

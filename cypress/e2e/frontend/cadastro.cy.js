@@ -1,6 +1,7 @@
 import { CadastroPage } from "../../pages/CadastroPage";
 import { gerarUsuario } from "../../utils/usuarioCadastro";
 
+// --- Cenario de testes positivos
 describe("Cadastro de usuário com sucesso", () => {
   const cadastroPage = new CadastroPage();
 
@@ -18,6 +19,7 @@ describe("Cadastro de usuário com sucesso", () => {
   });
 });
 
+// --- Cenario de testes negativos
 describe("Cadastro de usuário com erro", () => {
   const cadastroPage = new CadastroPage();
 

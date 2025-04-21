@@ -1,5 +1,6 @@
 import { realizarLogin } from "../../support/api/loginHelper";
 
+// --- Cenario de testes positivos
 describe("API - Login de usuário com sucesso", () => {
   it("deve realizar login com sucesso e retornar token", () => {
     cy.fixture("usuarioLoginApi").then((usuario) => {
@@ -12,17 +13,18 @@ describe("API - Login de usuário com sucesso", () => {
           .to.have.property("authorization")
           .and.to.be.a("string");
 
-        // Valida se o token parece ser JWT (3 partes separadas por ponto)
+        // Valida as 3 partes do token separadas por ponto)
         const token = response.body.authorization;
         expect(token.split(".")).to.have.length(3);
 
-        // Loga o tempo de resposta
+        // Log do tempo de resposta
         cy.log(`Tempo de resposta: ${response.duration}ms`);
       });
     });
   });
 });
 
+// --- Cenario de testes negativos
 describe("API - Login com usuário inválido", () => {
   it("deve retornar erro ao tentar login com credenciais inválidas", () => {
     const usuarioInvalido = {

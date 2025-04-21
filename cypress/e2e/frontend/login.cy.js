@@ -1,5 +1,6 @@
 import { LoginPage } from "../../pages/LoginPage";
 
+// --- Cenario de testes positivos
 describe("Login de usuário com sucesso", () => {
   const loginPage = new LoginPage();
 
@@ -16,6 +17,7 @@ describe("Login de usuário com sucesso", () => {
   });
 });
 
+// --- Cenario de testes negativos
 describe("Login de usuário com erro", () => {
   const loginPage = new LoginPage();
 
