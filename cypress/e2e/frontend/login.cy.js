@@ -70,10 +70,9 @@ describe("Login de usuário com erro", () => {
       email: "qualquerEmail@com",
       senha: "qualquerSenha",
     };
-  
+
     loginPage.preencherFormulario(usuario);
     loginPage.clicarEntrar();
     loginPage.validarMensagemDeErro("Email deve ser um email válido");
   });
-  
 });

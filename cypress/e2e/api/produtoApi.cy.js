@@ -7,7 +7,6 @@ describe("API - Cadastro de Produto", () => {
   it("deve cadastrar um novo produto com sucesso", () => {
     // Carrega os dados do usuário administrador a partir do fixture
     cy.fixture("usuarioLoginApi").then((admin) => {
-      
       // Realiza login e obtém o token de autenticação
       realizarLogin(admin).then((loginResponse) => {
         const token = loginResponse.body.authorization;
@@ -40,7 +39,8 @@ describe("API - Cadastro de Produto", () => {
             const produtoCriado = getResponse.body.produtos.find(
               (p) => p.nome === novoProduto.nome
             );
-            expect(produtoCriado, "Produto deve estar presente na listagem").to.exist;
+            expect(produtoCriado, "Produto deve estar presente na listagem").to
+              .exist;
 
             // Valida o nome do produto criado
             expect(produtoCriado.nome).to.eq(novoProduto.nome);

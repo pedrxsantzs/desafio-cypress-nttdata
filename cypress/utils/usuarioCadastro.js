@@ -1,13 +1,13 @@
-import { faker } from '@faker-js/faker'
+import { faker } from "@faker-js/faker";
 
 export const gerarUsuario = () => {
-    const nome = faker.name.fullName()
-    const email = faker.internet.email()
-    const senha = faker.internet.password()
+  const nome = faker.name.fullName();
+  const email = faker.internet.email();
+  const senha = faker.internet.password();
 
-    return {
-        nome,
-        email,
-        senha
-      }
-  }
+  return {
+    nome,
+    email,
+    senha,
+  };
+};

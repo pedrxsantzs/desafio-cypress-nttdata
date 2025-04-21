@@ -5,11 +5,11 @@ import { faker } from "@faker-js/faker";
 describe("API - Cadastro de Usuário com sucesso", () => {
   it("deve cadastrar um novo usuário com sucesso", () => {
     const novoUsuario = {
-        nome: faker.name.fullName(),
-        email: faker.internet.email(),
-        password: faker.internet.password(),
-        administrador: "true",
-      };
+      nome: faker.name.fullName(),
+      email: faker.internet.email(),
+      password: faker.internet.password(),
+      administrador: "true",
+    };
 
     // Chama a função para cadastrar o novo usuário
     cadastrarUsuario(novoUsuario).then((response) => {
@@ -29,7 +29,8 @@ describe("API - Cadastro de Usuário com sucesso", () => {
           (u) => u.email === novoUsuario.email
         );
 
-        expect(usuarioCriado, "Usuário deve estar presente na listagem").to.exist;
+        expect(usuarioCriado, "Usuário deve estar presente na listagem").to
+          .exist;
         expect(usuarioCriado.nome).to.eq(novoUsuario.nome);
         expect(usuarioCriado.email).to.eq(novoUsuario.email);
         expect(usuarioCriado.administrador).to.eq(novoUsuario.administrador);

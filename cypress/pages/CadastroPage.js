@@ -21,7 +21,7 @@ export class CadastroPage {
   }
 
   // Clica no botão responsável para cadastrar usuário como administrador
-  clicarCadastrarAdministrador(){
+  clicarCadastrarAdministrador() {
     cy.get(CadastroPageSelectors.checkboxInput).click();
   }
 

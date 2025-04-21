@@ -23,7 +23,7 @@ describe("Cadastro de produto com sucesso", () => {
       preco: faker.number.int({ min: 10, max: 1000 }).toString(),
       descricao: faker.commerce.productDescription(),
       quantidade: faker.number.int({ min: 1, max: 100 }),
-      imagem: "cypress/fixtures/caixa-misteriosa.png"
+      imagem: "cypress/fixtures/caixa-misteriosa.png",
     };
 
     produtoPage.preencherFormulario(produto);

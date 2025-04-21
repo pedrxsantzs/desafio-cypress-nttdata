@@ -1,7 +1,6 @@
 import { ProdutoPageSelectors } from "../selectors/ProdutoPageSelectors";
 
 export class ProdutoPage {
-
   // Acessa a tela de cadastro de produto e valida url
   navegarParaCadastro() {
     cy.get(ProdutoPageSelectors.acessarCadastroProdutoBtn).click();
