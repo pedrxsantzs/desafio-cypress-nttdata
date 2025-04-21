@@ -34,6 +34,15 @@ desafio-cypress-nttdata/
 
 ---
 
+## ⚠️ Observação importante sobre o ambiente de testes
+A aplicação utilizada neste desafio (https://front.serverest.dev/) reseta os dados de usuários periodicamente.
+
+Por isso, antes de executar os testes automatizados, é necessário rodar primeiro o cenário de cadastro de usuário, tanto para o frontend quanto para a API, a fim de garantir que os dados exigidos nos testes estejam disponíveis no ambiente.
+
+⚠️ Se o usuário não existir no momento da execução, os testes de login ou funcionalidades dependentes irão falhar.
+
+---
+
 ## 🧪 Como rodar os testes
 ### ⚙️ Pré-requisitos
 

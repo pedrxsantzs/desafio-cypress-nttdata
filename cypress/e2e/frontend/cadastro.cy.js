@@ -1,5 +1,6 @@
 import { CadastroPage } from "../../pages/CadastroPage";
 import { gerarUsuario } from "../../utils/usuarioCadastro";
+import { gerarUsuarioAdm } from "../../utils/usuarioCadastroAdm";
 
 // --- Cenario de testes positivos
 describe("Cadastro de usuário com sucesso", () => {
@@ -9,11 +10,18 @@ describe("Cadastro de usuário com sucesso", () => {
     cadastroPage.acessarPagina();
   });
 
+  it("deve cadastrar novo usuário administrador", () => {
+    const usuario = gerarUsuarioAdm();
+
+    cadastroPage.preencherFormulario(usuario);
+    cadastroPage.clicarCadastrarAdministrador();
+    cadastroPage.clicarCadastrar();
+  });
+
   it("deve cadastrar novo usuário com sucesso", () => {
     const usuario = gerarUsuario();
 
     cadastroPage.preencherFormulario(usuario);
-    cadastroPage.clicarCadastrarAdministrador();
     cadastroPage.clicarCadastrar();
     cadastroPage.validarCadastro();
   });
